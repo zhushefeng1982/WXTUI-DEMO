@@ -3,6 +3,9 @@ var homeMenu = [
     'title':'puzzle（拼图游戏）',
     'url': '../../pages/puzzle/puzzle'
   },{
+    'title': 'luckdraw（刮刮乐抽奖）',
+    'url': '../../pages/luckdraw/luckdraw'
+  },{
     'title':'accordion（折叠面板）',
     'url': '../../pages/accordion/accordion'
   },{

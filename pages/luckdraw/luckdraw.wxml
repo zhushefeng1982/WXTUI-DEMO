@@ -1,0 +1,1 @@
+<canvas style="background: url('../../src/images/juan.png') no-repeat center center" canvas-id="luck" class="tui-luck" bindtouchstart="onTouchStart" bindtouchmove="onTouchMove" bindtouchend="onTouchEnd"></canvas>

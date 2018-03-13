@@ -31,6 +31,7 @@
     "pages/scrolltab/scrolltab",
     "pages/map/map",
     "pages/loading/loading",
+    "pages/luckdraw/luckdraw",
     "pages/puzzle/puzzle"
   ],
   "window": {
