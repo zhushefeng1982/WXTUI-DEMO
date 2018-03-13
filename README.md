@@ -33,6 +33,40 @@ Page({
 >5. size: 刮去部分的半径
 >6. scale: 刮去部分占整体的百分比，大于就去掉涂层
 
+## h5lock.js的说明
+#### 1. 在当前页面对h5lock.js的引入
+```
+const Locker = require("./h5lock.js");
+```
+#### 2. Luck的使用
+
+```
+Page({
+  data: {
+    title: '请绘制您的图形密码'
+  },
+  onReady(){
+    this.lock = new Locker(this,{
+      id: 'canvas',
+      cleColor:'rgba(0,136,204,1)',
+      cleCenterColor:'rgba(0,136,204,1)',
+      chooseType: 3
+    });
+  },
+  resetPwd() {
+    this.lock.updatePassword();
+  }
+})
+```
+#### 参数说明
+
+>1. id: 手势锁canvas的canvas-id值
+>2. width: 手势锁canvas的宽度
+>3. height: 手势锁canvas的高度
+>4. cleColor: 手势锁canvas的锁圆颜色
+>5. cleCenterColor: 手势锁canvas的解锁路线颜色
+>6. chooseType: 手势锁的矩阵
+
 ## TUI微信小程序DEMO
 1. accordion（折叠面板）
 

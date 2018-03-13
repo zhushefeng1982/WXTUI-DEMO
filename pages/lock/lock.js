@@ -5,7 +5,6 @@ Page({
     title: '请绘制您的图形密码'
   },
   onReady(){
-    // var ctx = wx.createCanvasContext('canvas');
     this.lock = new Locker(this,{
       id: 'canvas',
       cleColor:'rgba(0,136,204,1)',
