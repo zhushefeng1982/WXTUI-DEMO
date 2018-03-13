@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.7.0",
 	"appid": "wxf1e50660fc546bce",
-	"projectname": "Rattenking",
+	"projectname": "TUI-DEMO",
 	"condition": {
 		"search": {
 			"current": -1,
