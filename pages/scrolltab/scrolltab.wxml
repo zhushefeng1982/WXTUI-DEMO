@@ -1,0 +1,16 @@
+<!--pages/scrolltab/scrolltab.wxml-->
+<!--导航滚动  -->
+<view class="tui-fixed-left">
+  <scroll-view class="tui-city-scroll" scroll-x="true">
+    <text bindtap="getStatus" id="NAV{{index}}" class="tui-nav-li {{index === status ? 'tui-nav-active' : ''}}" data-index="{{index}}" wx:for="{{navList}}">{{item}}</text>
+  </scroll-view>
+</view>
+<!--列表滚动区  -->
+ <view class="tui-fixed-y">
+  <scroll-view class="tui-city-scroll-y" scroll-y="true" scroll-into-view="NAV{{status}}" scroll-with-animation="true">
+    <view wx:for="{{navList}}">
+      <view id="NAV{{index}}" class="tui-list-head">{{item}}</view>
+      <view class="tui-list-li">{{item}} 列表 {{index}}</view>
+    </view>
+  </scroll-view>
+</view> 
