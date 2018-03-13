@@ -1,3 +1,38 @@
+## luck.js的说明
+#### 1. 在当前页面对luck.js的引入
+···
+const Luck = require("./luck.js");
+···
+#### 2. Luck的使用
+
+···
+Page({
+  data:{
+    width: '',
+    height: ''
+  },
+  onLoad(){
+    this.luck = new Luck(this,{
+      canvasId: 'luck',
+      width: 300,
+      height: 150,
+      maskColor: '#dddddd',
+      size: 10,
+      scale: 0.2
+    });
+  }
+})
+···
+#### 参数说明
+> 
+canvasId: 刮刮乐canvas的canvas-id值
+width: 刮刮乐canvas的宽度
+height: 刮刮乐canvas的高度
+maskColor: 刮刮乐canvas的涂层颜色
+size: 刮去部分的半径
+scale: 刮去部分占整体的百分比，大于就去掉涂层
+>
+
 ## TUI微信小程序DEMO
 1. accordion（折叠面板）
 
