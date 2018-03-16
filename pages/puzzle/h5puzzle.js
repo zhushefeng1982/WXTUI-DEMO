@@ -57,12 +57,8 @@ class Puzzle {
     }
     this.typeArr = arr;
   }
-  setType(param){
-    this.type = param;
-    console.log(param);
-  }
   randomArr(){
-    let len = this.pointsArr.length;
+    let len = this.pointsArr.length - 1;
     for(let i = 0; i < len; i++){
       let index = parseInt(Math.random() * len);
       let current = this.pointsArr[i];

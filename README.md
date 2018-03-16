@@ -1,3 +1,52 @@
+## h5puzzle.js的说明
+#### 1. 在当前页面对h5puzzle.js的引入
+```
+const Puzzle = require("./h5puzzle.js");
+```
+#### 2. Puzzle的使用
+```
+Page({
+  data: {
+    imgPoints: [],
+    imgArr: ['../../src/images/quanyecha.jpg', '../../src/images/haidao.jpg', '../../src/images/mingren1.jpg', '../../src/images/qilongzhu1.jpg','../../src/images/quanye.jpg'],
+    imgUrl: '../../src/images/quanyecha.jpg',
+    levelArr: [{id: 2,text: '弱智'},{id: 3,text: '简单'},{id: 4,text: '普通'},{id: 5,text: '困难'},{id: 6,text: '变态'},{id: 7,text: '无语'},{id: 8,text: '天才'},{id: 9,text: '疯子'},{id: 10,text: '想死'},{id: 11,text: '已死'}],
+    WIDTH: 0,
+    HEIGHT: 0,
+    width: 0,
+    height: 0,
+    status: false,
+    trans: 0,
+    currentX: 0,
+    currentY: 0,
+    currentPX: 0,
+    currentPY: 0,
+    type0: 4
+  },
+  onReady(){
+    let _this = this;
+    
+    new Puzzle(this);
+  },
+  getType(e){
+    this.setData({
+      trans: -this.data.WIDTH,
+      type0: e.currentTarget.dataset.type
+    })
+    this.puzzle = new Puzzle(this, {
+      type: e.currentTarget.dataset.type
+    })
+  },
+  getUrl(e){
+    this.setData({
+      trans: -this.data.WIDTH * 2,
+      imgUrl: e.currentTarget.dataset.url
+    })
+  }
+})
+```
+#### 参数说明
+> type: 拼图的矩阵数
 
 ## luck.js的说明
 #### 1. 在当前页面对luck.js的引入
@@ -191,3 +240,7 @@ Page({
 31. luckdraw（刮刮乐抽奖）
 
 > 制作luck插件，实现刮刮乐抽奖。
+
+32. puzzle（拼图游戏）
+
+> 制作puzzle插件，实现拖拽拼图游戏。
